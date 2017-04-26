@@ -1,6 +1,10 @@
 <h1>All Photos</h1>
 
-<a> Add a new photo </a>
+<a href="photos/new">
+  Add a new photo
+</a>
+
+
 
 <% @all_photos.each do |the_photo| %>
 <div class="thumbnail">
@@ -11,12 +15,12 @@
 Show Details</a>
 
 
-  <a class="btn btn-default btn-block">
+  <a class="btn btn-default btn-block" href="/photos/<%= the_photo.id %>/edit">
     Edit
   </a>
 
 
-<a class="btn btn-default btn-block">
+<a class="btn btn-default btn-block" href ="delete_photo/<%= the_photo.id %>/">
   Delete
 </a>
 
